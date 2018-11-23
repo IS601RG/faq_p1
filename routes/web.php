@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/user/{user_id}/profile', 'ProfileController@create')->name('profile.create');
+
+
+
+Route::get('/questions/{question_id}/answers/create', 'AnswerController@create')->name('answers.create');
